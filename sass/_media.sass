@@ -1,8 +1,8 @@
 @media (max-width: 1200px)
 	.menu
-		&_item 
-			padding-right: 20px
-		&_link 
+		&_item
+			padding: 0 15px
+		&_link
 			font-size: 13px
 	.promo
 		&_header
@@ -24,17 +24,15 @@
 			margin-top: 25px
 		.download
 			position: static
-			display: block
-			width: 296px
 			margin: 0 auto
 			margin-top: 15px
 
 @media ( max-width: 991px)
 	.menu
-		&_item 
+		&_item
 			padding-right: 8px
-		&_link 
-			font-size: 10px	
+		&_link
+			font-size: 10px
 	.subheader
 		&_logo
 			img
@@ -45,11 +43,10 @@
 			font-size: 20px
 		&_button
 			width: 100%
-			margin-top: 21px
 			height: 41px
 			&:hover
 				background-color: none
-				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)	
+				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
 			&:focus, &:active
 				outline: none
 	.promo
@@ -60,7 +57,7 @@
 		&_btn
 			&:hover
 				background-color: none
-				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)	
+				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
 			&:focus, &:active
 				outline: none
 	.title
@@ -70,7 +67,7 @@
 		align-items: center
 		&_text_container
 			margin-top: 20px
-			width: 300px		
+			width: 300px
 	.mobile
 		&_item
 			width: 310px
@@ -84,10 +81,14 @@
 		img
 			width: 752px
 
+@media ( max-width: 800px)
+	nav
+		background: #1eacc7
 
-
-
-@media ( max-width: 767px)
+	.header
+		&_mobile
+			&_logo
+				display: inline-block
 	.menu
 		position: fixed
 		flex-direction: column
@@ -98,6 +99,7 @@
 		width: 50%
 		height: 100vh
 		padding: 20px 15px
+		overflow-y: scroll
 		background-color: rgba(0,0,0,.8)
 		&_active
 			right: 0
@@ -109,51 +111,32 @@
 			font-size: 20px
 	nav
 		.hamburger
-			display: block
+			display: flex
+			flex-direction: column
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
-			right: 10px
-			width: 26px	
-			height: 12px
+			right: 25px
+			width: 26px
 			span
 				display: block
 				height: 2px
 				width: 100%
 				background: #fff
-				margin-bottom: 2px
+				margin-bottom: 4px
 				transition: 0.5s all
+				&:last-child
+					margin-bottom: 0
 			&_active
 				span
-					margin-bottom: -2px
 					&:nth-child(1)
-						transform: rotate(-45deg) translateY(3px)
+						transform: rotate(-45deg) translateY(1px)
+						margin-bottom: 0
 					&:nth-child(2)
 						display: none
 					&:nth-child(3)
-						transform: rotate(45deg) translateY(3px)
-	.subheader
-		.xs-hidden
-			display: none
-		.xs-visible
-			display: block
-		&_phone
-			display: block
-			margin-top: 10px
-			color: #ffffff
-			font-size: 18px
-			font-weight: 400
-			text-transform: uppercase
-			text-align: center
-		&_button
-			display: block
-			width: 200px
-			height: 40px
-			margin: 0 auto
-			margin-top: 10px
-	.promo
-		&_header
-			line-height: 45px
+						transform: rotate(45deg) translateY(-1px)
+						margin-bottom: 0
 
 	.world
 		min-height: 517px
@@ -168,29 +151,46 @@
 		.footer_info
 			justify-content: space-between
 
+@media ( max-width: 767px)
+	.subheader
+		.xs-hidden
+			display: none
+		.xs-visible
+			display: inline-block
+		&_logo
+			display: none
+		&_phone
+			color: #ffffff
+			font-size: 18px
+			font-weight: 400
+			text-transform: uppercase
+			text-align: initial
+			margin-right: 20px
+		&_button
+			display: inline-block
+			width: 200px
+			height: 40px
 
 @media ( max-width: 575px )
+	nav
+		padding: 13px 20px
 	.subheader
 		min-height: 60px
 		padding-bottom: 0
 		&_official
 			display: none
 		&_logo
-			margin-top: 22px
 			line-height: 1
 		&_phone
 			font-size: 12px
 			font-weight: 400
 			text-transform: uppercase
-			margin-top: 11px
-			line-height: 10px
 		&_button
 			width: 110px
 			height: 22px
 			font-size: 10px
 			font-weight: 400
 			text-transform: uppercase
-			margin-top: 9px
 
 	.promo
 		min-height: 400px
@@ -200,12 +200,10 @@
 		&_header
 			font-size: 30px
 			padding: 0 24px
-			line-height: 35px
 		&_subheader
 			font-size: 20px
 			margin-top: 33px
 			padding: 0 10px
-			line-height: 30px
 		&_btn
 			width: 210px
 			height: 50px
@@ -221,14 +219,13 @@
 			display: block
 			padding: 5px 0
 	.eight_reasons
-		padding: 22px 0 36px 0
+		padding: 65px 0 0 0
 		.title
 			margin-top: 15px
 			font-size: 16px
-			line-height: 16px
 	.reason_container
 		margin-top: 26px
-	.reason 
+	.reason
 		&_cirlce_icon
 			width: 100px
 			height: 100px
@@ -242,12 +239,13 @@
 		font-size: 16px
 	.mobile
 		padding-bottom: 50px
+		padding-top: 65px
 		&_item
 			width: 260px
 			height: 255px
 			&_subtitle
 				font-size: 20px
-	
+
 	.choice_p1
 		min-height: 469px
 		.img-visible
@@ -260,12 +258,12 @@
 			display: none
 	.require
 		&_list
-			li 
+			li
 				font-size: 16px
 	.world
 		height: 320px
 		&_cities
-			a 
+			a
 				font-size: 12px
 	footer
 		.visible
@@ -278,10 +276,9 @@
 				a
 					font-size: 14px
 		.footer_info
-			display: none 
+			display: none
 		.footer_info_media_small_1
 			list-style-type: none
-			line-height: 14px
 			margin-top: 16px
 			margin-bottom: 0
 			display: flex
@@ -296,7 +293,6 @@
 					text-decoration: none
 		.footer_info_media_small_2
 			list-style-type: none
-			line-height: 14px
 			margin-top: 16px
 			margin-bottom: 0
 			display: flex
@@ -309,11 +305,3 @@
 					font-weight: 300
 					text-transform: uppercase
 					text-decoration: none
-			
-
-
-						
-						
-						
-
-

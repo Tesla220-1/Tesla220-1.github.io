@@ -15,124 +15,115 @@ nav
 	.hamburger
 		display: none
 
+a
+	color: #ffffff
+	transition: $transition
+	&:hover
+		color: #1eacc7
+		text-decoration: none
+
+.overflow-hidden
+	overflow: hidden
+
+.header
+	&_mobile
+		&_logo
+			display: none
+			max-width: 120px
+			&_img
+				max-width: 100%
+				max-height: 100%
+
 .menu
 	margin: 0
 	list-style: none
 	display: flex
-	justify-content: space-between
-
+	justify-content: center
 	&_item
 		border-right: 2px dotted black
-		padding-right: 27px
+		padding: 0 25px
 		&:last-child
 			border-right: none
-
 	&_link
-		color: #ffffff
 		font-size: 15px
 		font-weight: 300
-		&:hover
-			color: #ffffff
-
-
 
 .subheader
 	/* margin-top: 50px */
 	min-height: 84px
 	background-color: rgba(0, 0, 0, 0.6)
-	padding-bottom: 17px
 	position: absolute
 	width: 100%
-
+	padding: 20px 0
 	&_logo
 		display: block
-		margin-top: 16px
 		max-width: 100%
-
 	&_official
 		color: #ffffff
 		font-size: 13px
 		font-weight: 400
 		opacity: 0.5
 		margin-top: 6px
-
 	&_call
 		color: #ffffff
 		font-size: 12px
 		font-weight: 300
-		margin-top: 19px
 		text-align: right
-
 	&_phone
 		display: block
-		color: #ffffff
 		font-size: 22px
 		font-weight: 400
 		text-transform: uppercase
-		margin-top: 8px
 		text-align: right
-		line-height: 18px
-		&:hover
-			color: #ffffff
-
+		line-height: 1
 	&_button
-		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
-		color: #ffffff
 		font-size: 14px
 		font-weight: 400
 		text-transform: uppercase
 		width: 172px
 		height: 46px
-		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
-		border: none
-		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
-		border-radius: 4px
-		margin-top: 19px
-		+btn_hover
+		+btn_main
 	.xs-visible
 		display: none
-	
+
+.header
+	padding-top: 50px
 
 .promo
-	margin-top: 50px
 	min-height: 800px
 	background: url(../img/header_bg.png) center (center / cover) no-repeat
-	padding-top: 150px
+	padding-top: 90px
 	padding-bottom: 135px
-
+	&_container
+		padding-top: 60px
 	&_header
 		color: #ffffff
 		text-transform: uppercase
 		font-size: 60px
-		line-height: 60px
+		line-height: 1
 		font-weight: 700
 		text-align: center
 		margin: 0
-
 	&_subheader
 		color: #ffffff
 		font-size: 36px
-		line-height: 36px
+		line-height: 1
 		text-transform: uppercase
 		font-weight: 700
 		text-align: center
 		margin: 0
 		margin-top: 22px
-
 	&_descr
 		color: #ffffff
 		font-size: 18px
 		font-weight: 400
-		line-height: 24px
+		line-height: 1.2
 		text-align: center
 		margin-top: 23px
-
 	&_first_p
 		margin-bottom: 38px
-
 	&_descr_second_p
 		margin-bottom: 0
-
 	&_btn
 		/* Style for "Rounded Re"*/
 		display: block
@@ -151,18 +142,16 @@ nav
 		font-weight: 400
 		text-transform: uppercase
 		text-align: center
-		+btn_hover
+		+btn_main
 
 .eight_reasons
-	min-height: 900px
 	background-color: white
 	padding-top: 70px
 	padding-bottom: 65px
-
 	.label
 		color: #ffffff
 		font-size: 11px
-		line-height: 24px
+		line-height: 2.3
 		font-weight: 400
 		text-transform: uppercase
 		text-align: center
@@ -171,12 +160,11 @@ nav
 		background-color: #000000
 		margin: 0 auto
 		text-align: center
-
 	.title
 		color: #222222
 		font-size: 38px
 		font-weight: 700
-		line-height: 38px
+		line-height: 1
 		text-transform: uppercase
 		margin-bottom: 0
 		margin-top: 38px
@@ -184,7 +172,6 @@ nav
 
 .reason_container
 	margin-top: 40px
-
 	&_row
 		display: flex
 		margin-bottom: 30px
@@ -192,7 +179,7 @@ nav
 .reason
 	display: flex
 	align-items: center
-
+	margin-bottom: 25px
 	&_cirlce_icon
 		display: flex
 		justify-content: center
@@ -212,28 +199,25 @@ nav
 		margin-right: 2px
 	&_stickers_icon
 		margin-right: 4px
-
 	&_text_container
 		width: 342px
-
 	&_header
 		color: #1eacc7
 		font-size: 17px
 		font-weight: 400
 		margin-bottom: 0
-		line-height: 21px
-
+		line-height: 1.2
 	&_text
 		color: #202020
 		font-size: 15px
 		font-weight: 300
-		line-height: 21px
+		line-height: 1.3
 		margin-bottom: 0
 
 .label
 	color: #ffffff
 	font-size: 11px
-	line-height: 24px
+	line-height: 2.3
 	font-weight: 400
 	text-transform: uppercase
 	text-align: center
@@ -247,7 +231,7 @@ nav
 	color: #222222
 	font-size: 38px
 	font-weight: 700
-	line-height: 38px
+	line-height: 1
 	text-transform: uppercase
 	margin-bottom: 0
 	margin-top: 38px
@@ -257,24 +241,30 @@ nav
 	color: #222222
 	font-size: 17px
 	font-weight: 400
-	line-height: 21px
+	line-height: 1.2
 	text-align: center
 	margin-top: 19px
 
 .mobile
 	min-height: 864px
-	padding-top: 48px
+	padding-top: 70px
 	padding-bottom: 80px
 	background: url('../img/uber_mobile/background_mobile.png') center (center/cover) no-repeat
 	.row
 		margin-top: 32px
 	&_item
+		display: block
 		width: 320px
 		height: 280px
 		position: relative
 		margin: 0 auto
 		margin-bottom: 19px
 		padding-top: 92px
+		cursor: pointer
+		&:hover
+			text-decoration: none
+			.mobile_item_plus::before, .mobile_item_plus::after
+				background-color: $demand_color
 		&_1
 			background: url('../img/uber_mobile/mobile-1.png') center (center/cover) no-repeat
 		&_2
@@ -315,7 +305,7 @@ nav
 				width: 14px
 				height: 2px
 				background-color: $condition_color
-				transition: 0.3s all
+				transition: $transition
 			&::after
 				content: ''
 				display: block
@@ -325,11 +315,7 @@ nav
 				position: absolute
 				left: 50%
 				transform: translateX(-50%)
-				transition: 0.3s all
-			&:hover
-				&::before, &::after
-					background-color: $demand_color
-					
+				transition: $transition
 
 .choice_p1
 	min-height: 499px
@@ -360,9 +346,8 @@ nav
 			color: #222222
 			font-size: 17px
 			font-weight: 300
-			line-height: 24px
+			line-height: 1.3
 			text-align: center
-
 
 .require
 	padding-top: 68px
@@ -383,17 +368,17 @@ nav
 			position: relative
 			font-size: 17px
 			font-weight: 300
-			line-height: 24px
+			line-height: 1.3
 			margin-bottom: 10px
 			&::before
 				content: ''
 				display: block
 				position: absolute
-				left: -32px
-				top: 3px
-				width: 21px
+				left: -35px
+				top: 2px
+				width: 20px
 				height: 20px
-				background: url(../icons/check_mark_green_original.png) center (center/cover) no-repeat
+				background: url(../icons/blue-checkmark.svg) center (center/cover) no-repeat
 	&_descr
 		font-weight: 300
 		color: $condition_color
@@ -403,8 +388,7 @@ nav
 		.require_list
 			li
 				&::before
-					background: url(../icons/check_mark_red_original.png) center (center/cover) no-repeat
-
+					background: url(../icons/red-checkmark.svg) center (center/cover) no-repeat
 
 .world
 	min-height: 717px
@@ -430,6 +414,9 @@ nav
 			transform: translateX(-50%)
 			bottom: 49px
 			text-decoration: none
+			transition: $transition
+			&:hover
+				color: #ffffff
 
 footer
 	min-height: 156px
@@ -468,7 +455,7 @@ footer
 		margin: 0 auto
 	.footer_nav
 		list-style-type: none
-		line-height: 16px
+		line-height: 1
 		margin-top: 35px
 		margin-bottom: 0
 		display: flex
@@ -481,9 +468,12 @@ footer
 				font-weight: 300
 				text-transform: uppercase
 				text-decoration: none
+				transition: $transition
+				&:hover
+					color: #1eacc7
 	.footer_info
 		list-style-type: none
-		line-height: 16px
+		line-height: 1
 		margin-top: 16px
 		margin-bottom: 0
 		display: flex
@@ -496,6 +486,9 @@ footer
 				font-weight: 300
 				text-transform: uppercase
 				text-decoration: none
+				transition: $transition
+				&:hover
+					color: #1eacc7
 	.footer_info_media_small_1
 		display: none
 	.footer_info_media_small_2
@@ -512,8 +505,9 @@ footer
 		right: 23px
 		top: 50%
 		transform: translateY(-50%)
-		widows: 296px
 		height: 27px
+		display: flex
+		justify-content: center
 		a
 			margin-right: 7px
 			&:last-child
