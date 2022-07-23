@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu_item'),
     hamburger = document.querySelector('.hamburger'),
-	body = document.body;
+	  body = document.body;
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger_active');
@@ -36,4 +36,14 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     }
     // flowing scroll end
+
+    window.addEventListener('scroll', () => {
+	  const pageUp = document.querySelector('.page-up');
+    if (window.pageYOffset <= 850) {
+      pageUp.style.opacity ='0';
+        } else {
+      pageUp.style.opacity ='1';
+      }
+    })
 })
+
