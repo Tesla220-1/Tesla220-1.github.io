@@ -1,0 +1,56 @@
+.overlay
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    background-color: rgba(0, 0, 0, 0.56)
+    z-index: 15
+    overflow: auto
+    max-height: 100vh
+
+.modal
+    position: absolute
+    top: 100px
+    left: 50%
+    transform: translateX(-50%)
+    width: 380px
+    min-height: 400px
+    background-color: #f2f2f2
+    text-align: center
+    padding: 38px 40px 40px
+    &__close
+        width: 30px
+        height: 30px
+        font-size: 35px
+        color: $condition_color
+        position: absolute
+        font-weight: bold
+        right: -40px
+        top: -10px
+        cursor: pointer
+    &__title 
+        color: #202020
+        font-size: 18px
+        font-weight: 700
+    &__subtitle 
+        color: #202020
+        font-size: 14px
+        font-weight: 500
+    &__button
+        font-size: 14px
+        font-weight: 400
+        text-transform: uppercase
+        width: 100%
+        padding: 20px
+        text-align: center
+        +btn_main
+        margin-top: 35px
+    &_mini
+        min-height: 140px
+    .form
+        input
+            width: 100%
+	
+#consultation, #thanks
+    display: none

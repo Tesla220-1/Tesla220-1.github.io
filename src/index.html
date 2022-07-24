@@ -54,7 +54,7 @@
 
 					<div class="d-flex align-items-center justify-content-center col-12 col-sm-12 col-md-3 col-lg-2">
 						<a href="tel:+74957970988" class="xs-visible subheader_phone">8 495 797 09 88</a>
-						<button class="subheader_button">заказать звонок</button>
+						<button data-modal='consultation' class="subheader_button">заказать звонок</button>
 					</div>
 				</div>
 			</div>
@@ -81,7 +81,7 @@
 							зарабатывают от 80000- 120000 в месяц.
 						</p>
 					</div>
-					<button class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+					<button data-modal='consultation' class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
 
 				</div>
 			</div>
@@ -437,6 +437,31 @@
 		<img src="icons/arrow_up.svg" alt="arrow_up">
 	</a>
 
+	<div class="overlay">
+		<div class="modal" id="consultation">
+			<div class="modal__close">&times;</div>
+			<h2 class="modal__title">Просто заполните форму заявки</h2>
+			<h3 class="modal__subtitle">и мы перезвоним вам в течении 10 минут</h3>
+			<form action="#" class="form form_mt25">
+				<input name="name" required type="text" placeholder="Ваше имя">
+				<input name="phone" required placeholder="Ваш телефон">
+				<input name="email" required type="email" placeholder="Ваш E-mail">
+				<button type="submit" class="modal__button">заказать консультацию</button>
+			</form>
+		</div>
+
+		<div class="modal modal_mini" id="thanks">
+			<div class="modal__close">&times;</div>
+			<h2 class="modal__title">Спасибо за вашу заявку!</h2>
+			<h3 class="modal__subtitle">Наш менеджер свяжется с вами в ближайшее время!</h3>
+		</div>
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

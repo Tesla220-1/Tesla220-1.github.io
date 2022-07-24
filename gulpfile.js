@@ -54,6 +54,12 @@ gulp.task('scripts', function () {
         .pipe(browserSync.stream());
 });
 
+gulp.task('mailer', function () {
+    return gulp.src("src/mailer/**/*.*")
+        .pipe(gulp.dest("dist/mailer"))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('fonts', function () {
     return gulp.src("src/fonts/**/*")
         .pipe(gulp.dest("dist/fonts"))
@@ -73,4 +79,4 @@ gulp.task('images', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'additional-styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'additional-styles', 'mailer', 'scripts', 'fonts', 'icons', 'html', 'images'));
