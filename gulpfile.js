@@ -24,11 +24,12 @@ gulp.task('styles', function() {
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("build/css"))
+        .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('additional-styles', function () {
-    return gulp.src("src/css/**/*")
+    return gulp.src(['src/css/**/*',  '!src/css/style.min.css'])
         .pipe(gulp.dest("build/css"));
 });
 

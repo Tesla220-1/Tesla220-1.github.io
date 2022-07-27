@@ -68,28 +68,7 @@ $(document).ready(function(){
 		});
 	}
 
-	validateForm('#consultation form');
-    validateForm('#consultation-form');
-    validateForm('#order form');
-
-    //form-mail
-    $('form').submit( function(e) {
-      e.preventDefault();
-
-      $.ajax({
-          type: 'POST', //Написал что я отправляю данные на сервер
-          url: '../mailer/smart.php', //Указал путь к серверу
-          data: $(this).serialize() //Обработал данные перед отправкой на сервер
-      }).done(function() {
-          $(this).find('input').val(''); //Очистил input-ы формы
-
-          $('#consultation, #order').fadeOut();
-          $('.overlay, #thanks').fadeIn('slow');
-
-          $('form').trigger('reset'); // Перезапустил формы
-      });
-      return false;
-  } );
+  validateForm('#consultation form');
 
   //Modal
 	const overlay = document.querySelector('.overlay'),
@@ -102,7 +81,9 @@ $(document).ready(function(){
 			overlay.style.display = 'none';
 			consultationModal.style.display = 'none';
 			modalMini.style.display = 'none';
-      body.classList.remove('overflow-hidden');
+      if (window.innerWidth <= 1200) {
+        body.classList.remove('overflow-hidden');
+      }
 			
 			for (let j = 0; j < formOnPage.length; j++) {
 				formOnPage[j].setAttribute('required', 'required');
@@ -118,7 +99,9 @@ $(document).ready(function(){
 		consultationButton[i].addEventListener('click', function(event) {
 			overlay.style.display = 'block';
 			consultationModal.style.display = 'block';
-      body.classList.add('overflow-hidden');
+      if (window.innerWidth <= 1200) {
+        body.classList.add('overflow-hidden');
+      }
 
 			for (let j = 0; j < formOnPage.length; j++) {
 				formOnPage[j].removeAttribute('required', 'required');
